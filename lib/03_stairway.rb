@@ -1,77 +1,49 @@
-def roll_d #roll a dice
-  a = rand(1..6)
-  return a
-end
+def main
+  sommet = 10
+  marche = 1
+  tours = 1
 
-#resultat du dé
-def roll_1
-    a = roll_d
-  if a == 1
-    puts "1"
-    puts "tu descends d'une marche!"
+
+  while marche < sommet
+    jet_de_d = rand (1..6)
+    puts "lance le dé =======> #{jet_de_d}"
+
+    if jet_de_d == 1
+      puts "1"
+      puts "tu descends d'une marche!"
+      marche -= 1
+      puts "tu es à la marche #{marche}!"
+    elsif jet_de_d == 2
+      puts "2"
+      puts "Y A RIEN!!!"
+      puts "tu es à la marche #{marche}!"
+    elsif jet_de_d == 3
+      puts "3"
+      puts "Y A RIEN!!!"
+      puts "tu es à la marche #{marche}!"
+    elsif jet_de_d == 4
+      puts "4"
+      puts "Y A RIEN!!!"
+      puts "tu es à la marche #{marche}!"
+    elsif jet_de_d == 5
+      puts "5"
+      puts "tu montes d'une marche!"
+      marche += 1
+      puts "tu es à la marche #{marche}!"
+    elsif jet_de_d == 6
+      puts "6"
+      puts "tu montes d'une marche!"
+      marche +=1
+      puts "tu es à la marche #{marche}!"
+    end
+    tours += 1
   end
-end
 
-def roll_2
-    a = roll_d
-  if a == 2
-    puts "2"
-    puts "Y A RIEN!!!"
-  end
-end
-
-def roll_3
-    a = roll_d
-  if a == 3
-    puts "3"
-    puts "Y A RIEN!!!"
-  end
-end
-
-def roll_4
-    a = roll_d
-  if a == 4
-    puts "4"
-    puts "Y A RIEN!!!"
-  end
-end
-
-def roll_5
-    a = roll_d
-  if a == 5
-    puts "5"
-    puts "tu montes d'une marche!"
-  end
-end
-
-def roll_6
-    a = roll_d
-  if a == 6
-    puts "6"
-    puts "tu montes d'une marche!"
-  end
-end
-
-def marches #escalier
-  grid = Array.new (10){ Array.new(1) {}}
-end
-
-def end_game #fin du jeux
-  if marches == 10
-    puts "You Win madafakaz!"
-  end
+      puts "YOU WIN MADAFAKAZ! EN #{tours} TOURS!!!"
 end
 
 def perform
-  roll_d
-  roll_1
-  roll_2
-  roll_3
-  roll_4
-  roll_5
-  roll_6
-  marches
-  end_game
+  main
 end
 
 perform
