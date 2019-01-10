@@ -10,34 +10,28 @@ def roll_1
   if a == 1
     puts "1"
     puts "tu descends d'une marche!"
-    return n
     return down_py
     puts position
   elsif a == 2
     puts "2"
     puts "Y A RIEN!!!"
-    return n
     puts position
   elsif a == 3
     puts "3"
     puts "Y A RIEN!!!"
-    return n
     puts position
   elsif a == 4
     puts "4"
     puts "Y A RIEN!!!"
-    return n
     puts position
   elsif a == 5
     puts "5"
     puts "tu montes d'une marche!"
-    return n
     return up_py
     puts position
   elsif a == 6
     puts "6"
     puts "tu montes d'une marche!"
-    return n
     return up_py
     puts position
   end
